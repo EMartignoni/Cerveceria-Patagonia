@@ -1,0 +1,3 @@
+/* Source and licensing information for the line(s) below can be found at https://www.cervezapatagonia.com.ar/themes/custom/corebr_whitelabel/js/language-selector.js. */
+(function($,Drupal){"use strict";Drupal.behaviors.removeLanguageSelector={attach:function(context,settings){$('.social-media-zone #display-in-header-menu').remove();$('.header-menu-zone.column-1 #hide-search').remove();$('.header-menu-zone.column-2 #show-search').remove();},};})(jQuery,Drupal);
+/* Source and licensing information for the above line(s) can be found at https://www.cervezapatagonia.com.ar/themes/custom/corebr_whitelabel/js/language-selector.js. */;

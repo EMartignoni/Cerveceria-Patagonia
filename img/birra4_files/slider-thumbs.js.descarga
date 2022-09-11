@@ -1,0 +1,32 @@
+
+
+/**
+ * @file
+ * slider thumbs
+ *
+ */
+
+ ( function ($) {
+    "use strict";
+
+    Drupal.behaviors.sliderThumbs = {
+        attach: function (context, settings) {
+          if (document.querySelector(".slider-with-thumbs")) {
+              jQuery('.slider-with-thumbs').find('.slider-1').on('afterChange', function (){
+                var windowWidth = window.innerWidth;
+                if(windowWidth > 1199){
+                  let  topSlider = jQuery(".slider-with-thumbs").find('.slick-current').position().top;
+                  topSlider = topSlider + 90;
+                  topSlider = topSlider + 'px';
+                  jQuery('.js-after').css("top", topSlider);
+                } else if(windowWidth < 1199){
+                  let  leftSlider = jQuery(".slider-with-thumbs").find('.slick-current').position().left;
+                  leftSlider = leftSlider + 50;
+                  leftSlider = leftSlider + 'px';
+                  jQuery('.js-after').css("left", leftSlider);
+                }
+              });
+            }
+        }
+    };
+  })(jQuery)
