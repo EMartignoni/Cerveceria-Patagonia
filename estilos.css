@@ -3,3 +3,130 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    width: 90%;
+    background-image: url(img/BG4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 7px;
+}
+
+ul li >a{
+    padding: 7px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+ul li>a:hover{
+    text-decoration: underline;
+    color: rgb(227, 212, 0);
+    scale: 1.1;
+}
+
+h1{
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin: 4px;
+}
+
+.inicio {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
+    gap: 3px 3px;
+    grid-template-areas: 
+    "inicio__subtitulo inicio__parrafo ..."
+    "... ... inicio__img1"
+    "inicio__img2 inicio__img2 inicio__img1"
+    "... ... ..."
+    "... ... inicio__boton"
+    ;
+}
+
+.inicio .inicio__subtitulo{
+    grid-area: inicio__subtitulo;
+    text-align: center;
+    color: white;
+}
+
+.inicio .inicio__parrafo{
+    grid-area: inicio__parrafo;
+    text-align: center;
+    color: white;
+}
+
+.inicio .inicio__img1{
+    grid-area: inicio__img1;
+
+}
+
+.inicio__img1 img{
+border: solid 3px rgb(171, 171, 5);
+opacity: .9;
+width: 350px;
+}
+.inicio__img1 img:hover{
+    opacity: 1;
+    border: solid 3px rgb(209, 209, 0);
+    scale: 1.1;
+}
+
+.inicio .inicio__img2{
+    grid-area: inicio__img2;
+}
+
+.inicio__img2 img{
+    border: solid 3px rgb(209, 209, 0);
+    width: 500px;
+    opacity: .9;
+    text-align: center;
+    justify-items: center;
+    margin: 10px;
+}
+.inicio__img2 img:hover{
+    opacity: 1;
+    border: solid 3px rgb(209, 209, 0);
+    scale: 1.1;
+}
+
+.inicio .inicio__boton{
+    grid-area: inicio__boton;
+    text-align: end;
+}
+.inicio .inicio__boton button{
+    border: solid 2px rgb(205, 202, 184);
+    background-color: rgb(53, 53, 53);
+}
+.inicio .inicio__boton button:hover{
+    cursor: pointer;
+    height: 25px;
+    background: rgb(31, 83, 24);
+    scale: 1.1;
+    color: white;
+    border: solid rgb(255, 226, 37) 1px;
+    border-radius: 5px;
+}
+
+
+/* Footer */
+footer{
+    border: solid 3px rgb(205, 202, 184);
+    background-color: rgb(53, 53, 53);
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 50px;
+    }
+    footer h2{
+        display: flex;
+        color: white;
+        justify-content: center;
+    }
