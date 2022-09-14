@@ -3,13 +3,15 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body{
-    width: 90%;
     background-image: url(img/BG4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Poppins', sans-serif;
+    justify-content: center;
+    text-align: center;
 }
 
 nav ul{
@@ -41,7 +43,7 @@ h1{
 .inicio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: min-content min-content min-content min-content min-content min-content min-content;
+    grid-template-rows: min-content min-content min-content 1fr min-content min-content min-content;
     gap: 3px 3px;
     grid-template-areas: 
     "inicio__subtitulo inicio__parrafo ..."
@@ -101,6 +103,7 @@ width: 350px;
 .inicio .inicio__boton{
     grid-area: inicio__boton;
     text-align: end;
+    margin: 8px;
 }
 .inicio .inicio__boton button{
     border: solid 2px rgb(205, 202, 184);
@@ -130,3 +133,92 @@ footer{
         color: white;
         justify-content: center;
     }
+
+
+/* Horarios */
+.horarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content min-content min-content min-content;
+    gap: 3px 3px;
+    grid-template-areas: 
+    "horarios__subtitulo ... "
+    "...  horarios__imghorario"
+    "...  horarios__imghorario"
+    "horarios__subtitulo2 ..."
+    "... horarios__imgHH"
+    "... horarios__imgHH"
+    "horarios__subtitulo3 ... "
+    "... horarios__video"
+    ;
+}
+
+.horarios .horarios__subtitulo{
+    grid-area: horarios__subtitulo;
+    text-align: center;
+    color: white;
+    transition:all 2s ease;
+    font-size: 30px;
+
+}
+
+
+.horarios .horarios__subtitulo:hover{
+    color: rgb(255, 226, 37);
+}
+
+.horarios .horarios__imghorario{
+    grid-area: horarios__imghorario;
+}
+.horarios .horarios__imghorario img{
+    width: 450px;
+    height: 700px;
+    border: solid 3px rgb(255, 226, 37);
+    transition:all 2s ease;
+    place-items: center;
+}
+.horarios .horarios__imghorario img:hover{
+    height: 900px;
+    width: 600px;
+}
+
+.horarios .horarios__subtitulo2{
+    grid-area: horarios__subtitulo2;
+    color: white;
+    text-align: center;
+    transition:all 2s ease;
+    font-size: 30px;
+}
+.horarios .horarios__subtitulo2:hover{
+    color: rgb(255, 226, 37);
+    font-size: 50px;
+}
+
+.horarios .horarios__imgHH{
+    grid-area: horarios__imgHH;
+}
+.horarios .horarios__imgHH img{
+    width: 450px;
+    height: 700px;
+    transition: all 2s ease;
+    border: solid 3px rgb(255, 226, 37);
+}
+.horarios .horarios__imgHH img:hover{
+    width: 250px;
+    height: 450px;
+}
+
+.horarios .horarios__subtitulo3{
+    grid-area: horarios__subtitulo3;
+    color: white;
+    font-size: 30px;
+    transition: all 2s ease;
+}
+
+.horarios .horarios__subtitulo3:hover{
+    transform: rotate(25deg);
+}
+
+.horarios .horarios__video{
+    grid-area: horarios__video;
+}
