@@ -125,7 +125,8 @@ footer{
     border: solid 3px rgb(205, 202, 184);
     background-color: rgb(53, 53, 53);
     width: 100%;
-    margin-bottom: 0;
+    bottom: 0;
+    position: absolute;
     margin-top: 50px;
     }
     footer h2{
